@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro" name="MROV">
+    <xacro:arg name="initial_positions_file" default="initial_positions.yaml" />
+
+    <!-- Import MROV urdf file -->
+    <xacro:include filename="$(find roboforge_description)/urdf/MROV.urdf" />
+
+    <!-- Import control_xacro -->
+    <xacro:include filename="MROV.ros2_control.xacro" />
+
+
+    <xacro:MROV_ros2_control name="FakeSystem" initial_positions_file="$(arg initial_positions_file)"/>
+
+</robot>

@@ -1,0 +1,7 @@
+# Default initial positions for MROV's ros2_control fake system
+
+initial_positions:
+  Base_Link_Revolute-11: 0
+  Link_1_Revolute-12: 0
+  Link_2_Revolute-13: 0
+  Link_3_Revolute-8: 0

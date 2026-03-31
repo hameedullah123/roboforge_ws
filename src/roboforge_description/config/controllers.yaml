@@ -1,0 +1,26 @@
+controller_manager:
+  ros__parameters:
+    update_rate: 100
+
+    joint_state_broadcaster:
+      type: joint_state_broadcaster/JointStateBroadcaster
+
+    arm_controller:
+      type: joint_trajectory_controller/JointTrajectoryController
+
+arm_controller:
+  ros__parameters:
+    joints:
+      - Base_Link_Revolute-11
+      - Link_1_Revolute-12
+      - Link_2_Revolute-13
+      - Link_3_Revolute-8
+
+    command_interfaces:
+      - position
+
+    state_interfaces:
+      - position
+      - velocity
+
+    allow_partial_joints_goal: false

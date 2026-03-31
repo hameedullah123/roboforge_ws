@@ -1,0 +1,25 @@
+moveit_setup_assistant_config:
+  urdf:
+    package: roboforge_description
+    relative_path: urdf/MROV.urdf
+  srdf:
+    relative_path: config/MROV.srdf
+  package_settings:
+    author_name: ""
+    author_email: ""
+    generated_timestamp: 1773316157
+  control_xacro:
+    command:
+      - position
+    state:
+      - position
+      - velocity
+  modified_urdf:
+    xacros:
+      - control_xacro
+  control_xacro:
+    command:
+      - position
+    state:
+      - position
+      - velocity

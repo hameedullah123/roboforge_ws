@@ -1,0 +1,217 @@
+<robot name="MROV">
+
+  <link name="world"/>
+
+  <joint name="world_to_base" type="fixed">
+    <parent link="world"/>
+    <child link="Base_Link"/>
+    <origin xyz="0 0 0" rpy="1.5708 0 1.5708"/>
+  </joint>
+
+  <link name="Base_Link">
+    <inertial>
+      <origin xyz="0.0001356345924423959 -0.0027958209988345442 -0.17742579705845535" rpy="0 0 0"/>
+      <mass value="73.72720579216754"/>
+      <inertia ixx="6.080008408618806" iyy="7.448494266859929" izz="2.421318329739703"
+               ixy="0.0004522836114217125" iyz="-0.19161922081135851" ixz="0.0002600319584258763"/>
+    </inertial>
+   <visual name="Base_Link_visual">
+  <origin xyz="0 0 0" rpy="0 0 0"/>
+  <geometry>
+    <mesh filename="file:///home/instillmotion/roboforge_ws/src/roboforge_description/meshes/Base_Link.stl" scale="0.001 0.001 0.001"/>
+  </geometry>
+</visual>
+    <collision name="Base_Link_collision">
+      <origin xyz="0 0 -0.12" rpy="0 0 0"/>
+      <geometry>
+        <box size="0.55 0.42 0.28"/>
+      </geometry>
+    </collision>
+  </link>
+
+  <link name="Link_1">
+    <inertial>
+      <origin xyz="0.18608299280563856 -0.09930637280922637 0.000140804150153393" rpy="0 0 0"/>
+      <mass value="14.482580124533875"/>
+      <inertia ixx="0.031605126792847216" iyy="0.2299436371920638" izz="0.2445269438456591"
+               ixy="0.0320391397033634" iyz="2.4257608514779982e-05" ixz="-0.0001090383327939648"/>
+    </inertial>
+    <visual name="Link_1_visual">
+      <origin xyz="1.7308998350243355e-09 0.08224999771294594 0.13000000163195125"
+              rpy="3.1415926535897927 4.705543112124352e-16 1.2374103657084265e-15"/>
+      <geometry>
+
+far from the base
+
+        <mesh filename="file:///home/instillmotion/roboforge_ws/src/roboforge_description/meshes/Link_1.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+    </visual>
+    <collision name="Link_1_collision">
+      <origin xyz="0.18 -0.02 0.0" rpy="0 1.5708 0"/>
+      <geometry>
+        <cylinder radius="0.07" length="0.34"/>
+      </geometry>
+    </collision>
+  </link>
+
+  <link name="Link_2">
+    <inertial>
+      <origin xyz="0.15291121542347832 0.10745667780920695 0.05028337243925731" rpy="0 0 0"/>
+      <mass value="4.795520335939489"/>
+      <inertia ixx="0.0661479704368495" iyy="0.0987819411507154" izz="0.1373437951340477"
+               ixy="-0.058616699505220804" iyz="0.0003083336265996855" ixz="0.0004530731777151773"/>
+    </inertial>
+    <visual name="Link_2_visual">
+      <origin xyz="-0.19324999771294718 -0.13000000163195025 0.050000001730899905"
+              rpy="-1.5707963267948972 -1.570796326794893 0"/>
+      <geometry>
+        <mesh filename="file:///home/instillmotion/roboforge_ws/src/roboforge_description/meshes/Link_2.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+    </visual>
+    <collision name="Link_2_collision">
+
+far from the base
+
+      <origin xyz="0.15 0.11 0.05" rpy="0 1.5708 0"/>
+      <geometry>
+        <cylinder radius="0.05" length="0.32"/>
+      </geometry>
+    </collision>
+  </link>
+
+  <link name="Link_3">
+    <inertial>
+      <origin xyz="0.21478168798956143 0.08096195232708539 0.05800376599428704" rpy="0 0 0"/>
+      <mass value="5.960058511721182"/>
+      <inertia ixx="0.013665487899860107" iyy="0.04778278915543899" izz="0.052848731805561044"
+               ixy="-0.015155801039595795" iyz="-4.1452007907544046e-08" ixz="-1.0152361179722894e-07"/>
+    </inertial>
+    <visual name="Link_3_visual">
+      <origin xyz="-0.4884264877129772 -0.4161745016319071 0.05800000173089491"
+              rpy="-1.5707963267948972 -1.57079632679477 0"/>
+      <geometry>
+        <mesh filename="file:///home/instillmotion/roboforge_ws/src/roboforge_description/meshes/Link_3.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+    </visual>
+    <collision name="Link_3_collision">
+      <origin xyz="0.21 0.08 0.058" rpy="0 1.5708 0"/>
+      <geometry>
+        <cylinder radius="0.045" length="0.36"/>
+      </geometry>
+    </collision>
+  </link>
+
+  <link name="Link_4">
+    <inertial>
+      <origin xyz="0.001587676837711417 0.07007455299123663 -0.013540153217061146" rpy="0 0 0"/>
+      <mass value="0.7115348170256092"/>
+      <inertia ixx="0.002016753973613117" iyy="0.00047510558923077173" izz="0.002089634028742328"
+               ixy="-9.866272179652854e-05" iyz="0.00038810256430279273" ixz="-8.219098690177765e-06"/>
+    </inertial>
+    <visual name="Link_4_visual">
+      <origin xyz="1.7309060562631373e-09 -0.948946743359802 -0.21681783919339118"
+              rpy="-0.3610242625979725 1.0823375344026993e-13 -1.1411217809271123e-16"/>
+      <geometry>
+        <mesh filename="file:///home/instillmotion/roboforge_ws/src/roboforge_description/meshes/Link_4.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+    </visual>
+    <collision name="Link_4_collision">
+      <origin xyz="0.0 0.07 -0.01" rpy="0 0 0"/>
+      <geometry>
+        <box size="0.18 0.08 0.05"/>
+      </geometry>
+    </collision>
+  </link>
+
+  <joint name="Base_Link_Revolute-11" type="revolute">
+    <origin xyz="-1.7308990302514204e-09 0.08399999771294589 0.1300000016319511"
+            rpy="3.141592653589793 4.705543112124359e-16 1.2374103657084236e-15"/>
+    <parent link="Base_Link"/>
+    <child link="Link_1"/>
+    <axis xyz="1.3738014789193181e-31 -1.0 0.0"/>
+    <limit lower="-3.141593" upper="3.141593" effort="1000000" velocity="1000000"/>
+  </joint>
+
+  <joint name="Link_1_Revolute-12" type="revolute">
+    <origin xyz="-0.0506 -0.11100000000000002 0.0"
+            rpy="-1.5707963267948952 1.232595164407831e-32 -1.5707963267948966"/>
+    <parent link="Link_1"/>
+    <child link="Link_2"/>
+    <axis xyz="-4.373750508443129e-32 1.38365925427228e-15 1.0"/>
+    <limit lower="-1.48353" upper="0.349066" effort="1000000" velocity="1000000"/>
+  </joint>
+
+  <joint name="Link_2_Revolute-13" type="revolute">
+    <origin xyz="0.29517649 0.2861745 -0.009800000000000387"
+            rpy="6.873988984094902e-14 4.7773350948379134e-31 -6.6102039147322185e-46"/>
+    <parent link="Link_2"/>
+    <child link="Link_3"/>
+    <axis xyz="-5.214710145682226e-31 7.01235490952213e-14 1.0"/>
+    <limit lower="-1.396263" upper="1.570796" effort="1000000" velocity="1000000"/>
+  </joint>
+
+  <joint name="Link_3_Revolute-8" type="revolute">
+    <origin xyz="0.32042091000000683 0.120982180000004 0.05799999999999152"
+            rpy="-1.2097720641969247 -1.5707963267947587 0"/>
+    <parent link="Link_3"/>
+    <child link="Link_4"/>
+    <axis xyz="4.87854907085075e-31 -1.0000005797923204 -1.5260432667529855e-07"/>
+    <limit lower="-3.141593" upper="3.141593" effort="1000000" velocity="1000000"/>
+  </joint>
+
+  <gazebo reference="Base_Link">
+    <material>Gazebo/Grey</material>
+  </gazebo>
+
+  <gazebo reference="Link_1">
+    <material>Gazebo/Red</material>
+  </gazebo>
+
+  <gazebo reference="Link_2">
+    <material>Gazebo/Blue</material>
+  </gazebo>
+
+  <gazebo reference="Link_3">
+    <material>Gazebo/Green</material>
+  </gazebo>
+
+  <gazebo reference="Link_4">
+    <material>Gazebo/Black</material>
+  </gazebo>
+  <ros2_control name="GazeboSystem" type="system">
+    <hardware>
+      <plugin>gazebo_ros2_control/GazeboSystem</plugin>
+    </hardware>
+
+    <joint name="Base_Link_Revolute-11">
+      <command_interface name="position"/>
+      <state_interface name="position"/>
+      <state_interface name="velocity"/>
+    </joint>
+
+    <joint name="Link_1_Revolute-12">
+      <command_interface name="position"/>
+      <state_interface name="position"/>
+      <state_interface name="velocity"/>
+    </joint>
+
+    <joint name="Link_2_Revolute-13">
+      <command_interface name="position"/>
+      <state_interface name="position"/>
+      <state_interface name="velocity"/>
+    </joint>
+
+    <joint name="Link_3_Revolute-8">
+      <command_interface name="position"/>
+      <state_interface name="position"/>
+      <state_interface name="velocity"/>
+    </joint>
+  </ros2_control>
+
+  <gazebo>
+  <plugin name="gazebo_ros2_control" filename="libgazebo_ros2_control.so">
+    <parameters>/home/instillmotion/roboforge_ws/src/roboforge_description/config/controllers.yaml</parameters>
+  </plugin>
+</gazebo>
+  
+</robot>
